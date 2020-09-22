@@ -1,0 +1,5 @@
+  .homePage{
+    background: linear-gradient(#28344052,#28344069), linear-gradient(#28344066,#28344040), url("../../Image/Rectangle\ 1.png") no-repeat fixed;
+    background-size: cover;
+    height: 700px;
+  }

@@ -1,0 +1,12 @@
+.container{
+    margin: 50px 20px;
+    color: white;
+}
+
+.form{
+    width: 470px;
+    height: 427px;
+    background: #FFFFFF;
+    color: #818181;
+    border-radius: 5px;
+}

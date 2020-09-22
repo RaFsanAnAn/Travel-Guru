@@ -1,0 +1,27 @@
+.linkText {
+    color: white;
+    font-size: 20px;
+    margin-right: 40px;
+  }
+  .brand img {
+    margin-left: 70px;
+    margin-right: 50px;
+    width: 120.26px;
+height: 56px;
+  }
+  .linkText:hover{
+    color: white;
+  }
+  .nav-link{
+    padding: 0;
+  }
+  .searchBar{
+    width: 370px;
+height: 44px;
+background: rgba(255, 255, 255, 0.2);
+border: 1px solid #FFFFFF;
+box-sizing: border-box;
+border-radius: 5px;
+color: #FFFFFF !important;
+  }
+

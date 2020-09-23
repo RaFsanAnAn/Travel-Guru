@@ -1,24 +1,75 @@
-import React from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import BookingForm from '../BookingForm/BookingForm';
+import React, { useState } from 'react';
+import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Link, useParams } from 'react-router-dom';
 import './Booking.css';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import location from '../../Fakedata/location'
 
 const Booking = () => {
+    const { id } = useParams()
+    const info = location[id];
+
+    const [startDate, setStartDate] = useState(new Date("2020/09/22"));
+    const [endDate, setEndDate] = useState(new Date("2020/09/29"));
+
     return (
         <div>
-        <Container>
-            <Row className = "container">
-                <Col md={7} className="ml-auto">
-                    <h2>Sundarban</h2>
-                    <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni velit iure a ut laborum facilis odit debitis tenetur perspiciatis ad consectetur, accusamus magnam molestias hic ratione nesciunt non suscipit expedita!</h4>
+            <Container>
+                <Row className="container">
+                    <Col md={7} className="ml-auto">
                     <br/>
-                  <Link to = "/booking"> <Button className="bg-warning btn-btn-lg">Booking</Button> </Link>
-                </Col>
-                <Col md={5} className="form">
-                <BookingForm></BookingForm>
-               </Col>
-            </Row>
+                        <h2>{info.name}</h2>
+                        <br/>
+                        <h5>{info.details}</h5>
+                        <br />
+                    </Col>
+                    <Col md={5} className="form">
+                        <Form action="" style={{ background: 'white', padding: '20px 20px', borderRadius: '20px' }}>
+                            <br />
+                            <Form.Group >
+                                <Form.Label>Origin</Form.Label>
+                                <Form.Control type="text" value="Dhaka" required/>
+                            </Form.Group>
+                            <br />
+                            <Form.Group controlId="formBasicPassword">
+                                <Form.Label>Destination</Form.Label>
+                                <Form.Control type="text" value={info.name} required/>
+                            </Form.Group>
+                            <br />
+                            <Row className="justify-content-between">
+                                <Col md={6} >
+                                    <DatePicker
+                                        selected={startDate}
+                                        onChange={date => setStartDate(date)}
+                                        selectsStart
+                                        closeOnScroll={true}
+                                        startDate={startDate}
+                                        endDate={endDate}
+                                    />
+                                </Col>
+
+                                <Col md={6} >
+                                    <DatePicker
+                                        selected={endDate}
+                                        onChange={date => setEndDate(date)}
+                                        selectsEnd
+                                        closeOnScroll={true}
+                                        startDate={startDate}
+                                        endDate={endDate}
+                                        minDate={startDate}
+                                    />
+                                </Col>
+                            </Row>
+                            <br />
+                            <center>  <Link to={`/hotels/${info.name}`}>
+                                <Button variant="warning" type="submit">
+                                    Submit
+                                 </Button>
+                            </Link> </center>
+                        </Form>
+                    </Col>
+                </Row>
             </Container>
         </div>
     );

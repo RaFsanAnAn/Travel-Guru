@@ -1,15 +1,15 @@
 import { MDBIcon } from 'mdbreact';
 import React from 'react';
-import { Button, Form, FormControl, Nav, Navbar } from 'react-bootstrap';
+import { Button,  Form,  Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import  logo  from '../../Image/Logo.png';
 import './Header.css';
 const Header = () => {
   return (
-    <>
+<>
       <Navbar >
         <Navbar.Brand className="brand py-3 pl-4">
-          <img src={logo} alt="" />
+        <Link to= "/"><img src={logo} alt="" /> </Link>  
         </Navbar.Brand>
         <Form >
         <MDBIcon icon="search" />
@@ -23,8 +23,8 @@ const Header = () => {
             <Link  to="/login"> <button className="btn btn-warning">Login</button></Link> 
           </Nav>
       </Navbar>
-    </>
-
+    
+</>
   );
 };
 

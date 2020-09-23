@@ -1,5 +1,91 @@
-  .homePage{
-    background: linear-gradient(#28344052,#28344069), linear-gradient(#28344066,#28344040), url("../../Image/Rectangle\ 1.png") no-repeat fixed;
-    background-size: cover;
-    height: 700px;
-  }
+  .place-div{
+    width: 706px;
+    overflow: auto;
+    display: none;
+    scrollbar-width: none;
+}
+.place-div::-webkit-scrollbar {
+    display: none;
+}
+.place-card{
+    height: 420px;
+    width: 270px;
+    border-radius: 25px;
+    border: 3px solid rgb(230, 199, 27);
+     margin: 20px 10px;
+}
+.place-btn{
+    height: 420px;
+    width: 270px;
+    border-radius: 25px;
+    margin: 20px 10px;
+    background: inherit;
+    border: none;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.place-btn:focus{
+    outline: 0;
+    border: none;
+    box-shadow: 15px 10px 12px -3px rgba(245, 202, 30, 0.974)
+}
+
+.carousel-caption{
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+h4{
+    font-family: 'Bebas Neue', cursive;
+    color: rgb(230, 199, 27);
+    font-style: italic;
+}
+.name-style{
+    background-color: orange;
+    border-radius: 15px;
+    padding: 4px 20px;
+}
+
+
+@media (min-width: 576px){
+.card-img-top .card {
+    flex: 1 0;
+    margin-right: 15px;
+    margin-bottom: 0;
+    margin-left: 0 !important;
+}
+
+.card-deck .card {
+  flex: 1 0;
+  margin-right: 15px;
+  margin-bottom: 0;
+  height: 60px;
+  margin-left: 0 !important;
+}
+
+}
+button {
+    appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: transparent;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: transparent;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 6px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}

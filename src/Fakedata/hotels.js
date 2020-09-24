@@ -31,7 +31,7 @@ const fakedata2 = [
     },
     {
         "id": 4,
-        "location":"Sajek valley",
+        "location":"Sajek",
         "title": "Mandarin Oriental",
         "features": "4 guests | 2 bedrooms | 2 beds | 2 baths",
         "details": "Wifi Air conditioning Kitchen",
@@ -41,7 +41,7 @@ const fakedata2 = [
     },
     {
         "id": 5,
-        "location":"Sajek valley",
+        "location":"Sajek",
         "title": "Four Seasons Hotel",
         "features": "4 guests | 2 bedrooms | 2 beds | 2 baths",
         "details": "Wifi Air conditioning Kitchen",
@@ -51,7 +51,7 @@ const fakedata2 = [
     },
     {
         "id": 6,
-        "location":"Sajek valley",
+        "location":"Sajek",
         "title": "Panorama Heaven",
         "image": "https://i.postimg.cc/7Yd0mVw9/id6.jpg",
         "features": "4 guests | 2 bedrooms | 2 beds | 2 baths",

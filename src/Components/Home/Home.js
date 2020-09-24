@@ -13,40 +13,40 @@ const Home = () => {
     };
     return (
         <div >
-        <Container>
-            <Row>
-                <Col md={5} >
-                <div style={{ color: 'white', height: '250px' }} className=" mt-5">
-                        <h1 className="name"><strong className="name-style">{value.name}</strong></h1> <br/>
-                        <p className="details">{value.details}</p>
-                    </div>
-                    <br />
-                    <Link to={`/booking/${value.id}`}><Button className="bg-warning btn-btn-lg">Booking  </Button> </Link>
-                </Col>
-                <Col md={7}>
-                    <CardDeck >
-                        <Card  >
-                        <button onClick={() => setLocation(0)}  className="place-btn" >
-                              <Card.Img variant="top" src={cardImg1} className="card " />
-                              </button>
-                        </Card>
+            <Container>
+                <Row>
+                    <Col md={5} >
+                        <div style={{ color: 'white', height: '250px' }} className=" mt-5">
+                            <h1 className="name"><strong className="name-style">{value.name}</strong></h1> <br />
+                            <p className="details">{value.details}</p>
+                        </div>
+                        <br />
+                        <Link to={`/booking/${value.id}`}><Button className="bg-warning btn-btn-lg">Booking  </Button> </Link>
+                    </Col>
+                    <Col md={7}>
+                        <CardDeck >
+                            <Card  >
+                                <button onClick={() => setLocation(0)} className="place-btn" >
+                                    <Card.Img variant="top" src={cardImg1} className="card " />
+                                </button>
+                            </Card>
 
-                        <Card >
-                        <button onClick={() => setLocation(1)}  className="place-btn" >
-                              <Card.Img variant="top" src={cardImg2} className="card " />
-                              </button>
-                        </Card>
+                            <Card >
+                                <button onClick={() => setLocation(1)} className="place-btn" >
+                                    <Card.Img variant="top" src={cardImg2} className="card " />
+                                </button>
+                            </Card>
 
-                        <Card >
-                        <button onClick={() => setLocation(2)}  className="place-btn" >
-                              <Card.Img variant="top" src={cardImg3} className="card " />
-                              </button>
-                        </Card>
-                    </CardDeck>
-                </Col>
-            </Row>
+                            <Card >
+                                <button onClick={() => setLocation(2)} className="place-btn" >
+                                    <Card.Img variant="top" src={cardImg3} className="card " />
+                                </button>
+                            </Card>
+                        </CardDeck>
+                    </Col>
+                </Row>
             </Container>
-        </div>      
-            );
-        };
+        </div>
+    );
+};
 export default Home;

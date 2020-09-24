@@ -1,0 +1,10 @@
+.buttonGoogle{
+    width: 100px;
+}
+
+.center{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}

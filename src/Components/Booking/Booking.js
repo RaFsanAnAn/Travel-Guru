@@ -13,14 +13,24 @@ const Booking = () => {
     const [startDate, setStartDate] = useState(new Date("2020/09/22"));
     const [endDate, setEndDate] = useState(new Date("2020/09/29"));
 
+    const btnStyle = {
+        display: 'flex',
+        flexDirection: 'row',
+        padding: '20px 152px',
+        width: '400px',
+        position: 'absolute',
+        background: '#F9A51A',
+        borderRadius: '5px',
+    }
+
     return (
         <div>
             <Container>
                 <Row className="container">
                     <Col md={7} className="ml-auto">
-                    <br/>
+                        <br />
                         <h2>{info.name}</h2>
-                        <br/>
+                        <br />
                         <h5>{info.details}</h5>
                         <br />
                     </Col>
@@ -29,12 +39,12 @@ const Booking = () => {
                             <br />
                             <Form.Group >
                                 <Form.Label>Origin</Form.Label>
-                                <Form.Control type="text" value="Dhaka" required/>
+                                <Form.Control type="text" value="Dhaka" required />
                             </Form.Group>
                             <br />
                             <Form.Group controlId="formBasicPassword">
                                 <Form.Label>Destination</Form.Label>
-                                <Form.Control type="text" value={info.name} required/>
+                                <Form.Control type="text" value={info.name} required />
                             </Form.Group>
                             <br />
                             <Row className="justify-content-between">
@@ -63,8 +73,8 @@ const Booking = () => {
                             </Row>
                             <br />
                             <center>  <Link to={`/hotels/${info.name}`}>
-                                <Button variant="warning" type="submit">
-                                    Submit
+                                <Button style={{ btnStyle }} variant="warning" type="submit">
+                                    Start Booking
                                  </Button>
                             </Link> </center>
                         </Form>

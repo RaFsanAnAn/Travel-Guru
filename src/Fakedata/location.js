@@ -5,7 +5,7 @@ const fakedata = [{
 },
 {
     "id": 1,
-    "name": "Sajek Valley",
+    "name": "Sajek",
     "details": "Sajek Valley - সাজেক ভ্যালি / মেঘের উপত্যকায় জীবন is an emerging tourist spot in Bangladesh situated among the hills of the Kasalong range of mountains in Sajek union.",
 },
 {
